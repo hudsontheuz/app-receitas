@@ -1,7 +1,6 @@
-import React from "react";
-
-const index = () => {
-  return <div></div>;
-};
-
-export default index;
+export interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}

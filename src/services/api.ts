@@ -1,7 +1,5 @@
-import React from "react";
+import axios from "axios";
 
-const api = () => {
-  return <div></div>;
-};
-
-export default api;
+export const api = axios.create({
+  baseURL: "https://jsonplaceholder.typicode.com",
+});
