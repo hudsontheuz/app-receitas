@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../services/api";
-import { Post } from "../types";
+import type { Post } from "../types";
 import { Container, Typography } from "@mui/material";
 
 export function PostDetails() {
@@ -10,7 +10,7 @@ export function PostDetails() {
 
   useEffect(() => {
     if (id) {
-      api.get(`/posts/${id}`).then((res) => setPost(res.data));
+      api.get(`/posts/${id}`).then((res: { data: Post }) => setPost(res.data));
     }
   }, [id]);
 

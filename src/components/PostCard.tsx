@@ -1,5 +1,5 @@
 import { Card, CardContent, Typography } from "@mui/material";
-import { Post } from "../types";
+import type { Post } from "../types";
 import { useNavigate } from "react-router-dom";
 
 interface PostCardProps {
