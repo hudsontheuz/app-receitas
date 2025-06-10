@@ -1,15 +1,13 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { PostList } from "./pages/PostList";
-import { PostDetails } from "./pages/PostDetails";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MealList } from "./pages/MealList";
+import { MealDetails } from "./pages/MealDetails";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Redireciona "/" para "/post" */}
-        <Route path="/" element={<Navigate to="/post" />} />
-        <Route path="/post" element={<PostList />} />
-        <Route path="/dados/:id" element={<PostDetails />} />
+        <Route path="/post" element={<MealList />} />
+        <Route path="/dados/:id" element={<MealDetails />} />
       </Routes>
     </BrowserRouter>
   );

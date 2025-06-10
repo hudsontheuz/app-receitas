@@ -1,6 +1,6 @@
-export interface Post {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
+export interface Meal {
+  idMeal: string;
+  strMeal: string;
+  strInstructions: string;
+  strMealThumb: string;
 }
