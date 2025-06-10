@@ -1,7 +1,23 @@
-import React from "react";
+import { Card, CardContent, Typography } from "@mui/material";
+import { Post } from "../types";
+import { useNavigate } from "react-router-dom";
 
-const PostCard = () => {
-  return <div></div>;
-};
+interface PostCardProps {
+  post: Post;
+}
 
-export default PostCard;
+export function PostCard({ post }: PostCardProps) {
+  const navigate = useNavigate();
+
+  return (
+    <Card
+      sx={{ marginBottom: 2, cursor: "pointer" }}
+      onClick={() => navigate(`/dados/${post.id}`)}
+    >
+      <CardContent>
+        <Typography variant="h6">{post.title}</Typography>
+        <Typography variant="body2">{post.body}</Typography>
+      </CardContent>
+    </Card>
+  );
+}
