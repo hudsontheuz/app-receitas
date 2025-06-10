@@ -1,3 +1,4 @@
+// App.tsx
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { MealList } from "./pages/MealList";
 import { MealDetails } from "./pages/MealDetails";
